@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove a character at the specified position of a given string and return the new string</title>
+</head>
+<body>
+    <label>Enter a string</label>
+    <input type="text" id="txt">
+    <label>Enter a position</label>
+    <input type="number" id="num">
+    <button class="btn">Click Me</button>
+
+    <p class="output"></p>
+<script>
+    function remove_character() 
+ {
+    let str = document.getElementById('txt').value;
+    let position = document.getElementById('num').value;
+    console.log(str, " " ,position);
+    let tempStr = " ";
+    
+    
+    tempStr = str.substring(0, position - 1) + str.substring(position)
+   
+   document.querySelector('.output').innerHTML = "The output of new string = " + tempStr;
+ 
+ }
+
+ let clickBtn = document.querySelector('.btn');
+ clickBtn.addEventListener('click', remove_character)
+
+</script>
+</body>
+</html>
